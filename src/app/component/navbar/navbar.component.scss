@@ -1,0 +1,39 @@
+@import "../../../themes.scss";
+
+
+
+mat-toolbar {
+  background-color: rgba(255,255,255, 0.1) !important;
+}
+
+
+
+.list-horizontal {
+  padding: 0;
+  .mat-list-item {
+    display: inline-flex;
+
+  }
+}
+
+a {
+  color:  map-get($accent, 500) !important;
+}
+
+a:hover{
+  color: map-get($accent, 200) !important;
+}
+
+.active-list-item {
+  color: map-get($active, 500) !important;
+}
+
+.active-list-item:hover {
+  color: map-get($active, 200) !important;
+}
+
+
+span.logoDark{
+  //color:#101010;
+  color: map-get($accent, 500) !important;
+}

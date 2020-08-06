@@ -1,0 +1,38 @@
+<div class="flex-container" fxLayout="row" fxLayoutAlign="space-between center"  >
+  <mat-toolbar  >
+    <div class="flex-container" fxFill fxLayout="row" fxLayoutAlign="start center" style="justify-content: flex-start;">
+      <div class="flex-item">
+        <span class="logoDark">V</span>
+        <span class="logoDark">P</span>
+      </div>
+      <div class="flex-item">
+        <mat-nav-list class="list-horizontal">
+          <div class="flex-container" fxFill fxLayout="row" fxLayoutAlign="end center" style="justify-content: flex-end;">
+
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item">
+              <a mat-list-item routerLink="/home" routerLinkActive="active-list-item">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+              </a>
+            </div>
+            <div class="flex-item ">
+              <a mat-list-item routerLink="/about" routerLinkActive="active-list-item">
+                <mat-icon>person</mat-icon>
+                <span>About</span>
+              </a>
+            </div>
+            <div class="flex-item ">
+              <a mat-list-item routerLink="/portfolio" routerLinkActive="active-list-item">
+                <mat-icon>code</mat-icon>
+                <span>Portfolio</span>
+              </a>
+            </div>
+          </div>
+        </mat-nav-list>
+      </div>
+    </div>
+  </mat-toolbar>
+</div>
+

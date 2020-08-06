@@ -1,0 +1,20 @@
+@import "../../../themes.scss";
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+h1{
+  //color:#101010;
+  color: map-get($accent, 500) !important;
+}
+p{
+
+    //color:#101010;
+    color: map-get($accent, 700) !important;
+
+}

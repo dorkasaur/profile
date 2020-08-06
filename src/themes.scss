@@ -1,0 +1,166 @@
+// Import library functions for theme creation.
+@import '~@angular/material/theming';
+
+// Include non-theme styles for core.
+@include mat-core();
+
+
+$grey: (
+  50 : #e8e8e8,
+  100 : #c6c6c6,
+  200 : #a1a1a1,
+  300 : #7b7b7b,
+  400 : #5e5e5e,
+  500 : #424242,
+  600 : #3c3c3c,
+  700 : #333333,
+  800 : #2b2b2b,
+  900 : #1d1d1d,
+  A100 : #f07878,
+  A200 : #eb4a4a,
+  A400 : #ff0303,
+  A700 : #e90000,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$orange: (
+  50 : #fef3e7,
+  100 : #fee0c2,
+  200 : #fdcc99,
+  300 : #fcb870,
+  400 : #fba852,
+  500 : #fa9933,
+  600 : #f9912e,
+  700 : #f98627,
+  800 : #f87c20,
+  900 : #f66b14,
+  A100 : #ffffff,
+  A200 : #fff7f2,
+  A400 : #ffd5bf,
+  A700 : #ffc5a6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$dark-grey: (
+  50 : #e4e4e4,
+  100 : #bcbcbc,
+  200 : #909090,
+  300 : #636363,
+  400 : #414141,
+  500 : #202020,
+  600 : #1c1c1c,
+  700 : #181818,
+  800 : #131313,
+  900 : #0b0b0b,
+  A100 : #e76c6c,
+  A200 : #e04040,
+  A400 : #ec0000,
+  A700 : #d30000,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+$light-grey: (
+  50 : #f7f7f7,
+  100 : #ebebeb,
+  200 : #dddddd,
+  300 : #cfcfcf,
+  400 : #c5c5c5,
+  500 : #bbbbbb,
+  600 : #b5b5b5,
+  700 : #acacac,
+  800 : #a4a4a4,
+  900 : #969696,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffcfcf,
+  A700 : #ffb6b6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+// Define your application's custom theme.
+$primary: mat-palette($dark-grey);
+$accent: mat-palette($light-grey);
+$active: mat-palette($mat-cyan);
+
+
+$theme: mat-dark-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+  )
+));
+
+
+@include angular-material-theme($theme);
+
+@mixin themed-stylesheets($mat-theme) {
+
+  $primary: map-get($mat-theme, primary);
+  $accent: map-get($mat-theme, accent);
+  $primary-color: mat-color($primary);
+  $accent-color: mat-color($accent);
+
+  .themed-element {
+    background: $primary-color;
+    color: $accent-color;
+  }
+}
+
