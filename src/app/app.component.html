@@ -1,7 +1,7 @@
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav role="navigation">
-<app-navigation-list></app-navigation-list>
+    <app-navigation-list (sidenavClose)="sidenav.close()"></app-navigation-list>
   </mat-sidenav>
 <mat-sidenav-content>
   <div class="container-column-nowrap">
