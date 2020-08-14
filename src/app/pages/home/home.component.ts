@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
+import {SMALL_WIDTH_BREAKPOINT} from '../../app.module';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-
-  constructor() { }
-
+  private mediaMatcher: MediaQueryList = window.matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
+  constructor(zone: NgZone) {
+    this.mediaMatcher.addEventListener('change', () => {
+      this.isSmallScreen();
+    });
+  }
   ngOnInit(): void {
   }
+
+
+
+  isSmallScreen(): boolean {
+    return this.mediaMatcher.matches;
+  }
+
 
 }

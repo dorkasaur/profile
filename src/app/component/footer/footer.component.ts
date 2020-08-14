@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
+import {SMALL_WIDTH_BREAKPOINT} from '../../app.module';
+
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
-
+  currentYear = new Date().getFullYear();
+  private mediaMatcher: MediaQueryList = window.matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
+  constructor(zone: NgZone) {
+    this.mediaMatcher.addEventListener('change', () => {
+      this.isSmallScreen();
+    });
+  }
   ngOnInit(): void {
   }
 
+  isSmallScreen(): boolean {
+    return this.mediaMatcher.matches;
+  }
 }

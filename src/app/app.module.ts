@@ -14,6 +14,11 @@ import { SamplesComponent } from './pages/samples/samples.component';
 import {CommonModule} from '@angular/common';
 import 'hammerjs';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { MatAnimatedIconComponent } from './component/mat-animated-icon/mat-animated-icon.component';
+import {VarDirective} from './component/directives/var.directive';
+import { NavigationListComponent } from './component/navigation-list/navigation-list.component';
+
+export const SMALL_WIDTH_BREAKPOINT = 600;
 
 @NgModule({
   declarations: [
@@ -23,7 +28,10 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
     HomeComponent,
     AboutComponent,
     SamplesComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    MatAnimatedIconComponent,
+    VarDirective,
+    NavigationListComponent
   ],
   imports: [
     CommonModule,
@@ -32,9 +40,11 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

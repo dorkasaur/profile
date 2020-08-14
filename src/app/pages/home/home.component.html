@@ -1,27 +1,24 @@
-<div class="flex-container" fxLayout="row" fxFlexFill>
+<div class="flex-container-nowrap"   [fxLayout] = "isSmallScreen() ? 'column ': 'row'" >
 
-  <div class="flex-item" fxLayout="column"  fxLayoutAlign="center center">
-    <div class="flex-item"></div>
-    <div class="flex-item"></div>
-    <div class="flex-item"></div>
-    <div class="flex-item">
+  <div class="flex-item-auto" fxLayout="column"    fxHide.xs fxFlex="0.001%"  fxLayoutAlign="center center"></div>
+  <div class="flex-item-auto" fxLayout="column"   fxFlexAlign="center center"    fxLayoutAlign="center center">
+
+    <div class="flex-item-inherit">
       <h1 style="color:white">Victor Palomar</h1>
 
     </div>
-    <div class="flex-item">
+    <div class="flex-item-inherit">
       <p> Software Developer</p>
     </div>
-    <div class="flex-item"></div>
-    <div class="flex-item"></div>
-    <div class="flex-item"></div>
+
+
   </div>
-  <div class="flex-item" fxLayout="column"  fxLayoutAlign="center center">
-    <div class="flex-item"></div>
 
-
-    <div class="flex-item">
-      <img src= "assets/img/6.png" alt="me" height="600" width="600"/>
+  <div class="row" >
+    <div class="cell" >
+      <img src= "assets/img/6.png" alt="me" class="img-responsive"/>
     </div>
-    <div class="flex-item"></div>
   </div>
+
+  <div class="flex-item-auto" fxLayout="column" fxHide.xs  fxFlex="0.001%" fxLayoutAlign="center center"></div>
 </div>

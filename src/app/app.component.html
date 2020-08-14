@@ -1,14 +1,23 @@
 
-<header>
-<app-navbar></app-navbar>
-</header>
-  <main class="main">
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+<app-navigation-list></app-navigation-list>
+  </mat-sidenav>
+<mat-sidenav-content>
+  <div class="container-column-nowrap">
+    <header>
+      <app-navbar (sidenavToggle)="sidenav.toggle()"></app-navbar>
+    </header>
 
-  <router-outlet></router-outlet>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
 
-  </main>
+    <footer>
+      <app-footer></app-footer>
+    </footer>
 
-  <footer class="footer">
-  <app-footer></app-footer>
-  </footer>
+  </div>
 
+</mat-sidenav-content>
+</mat-sidenav-container>

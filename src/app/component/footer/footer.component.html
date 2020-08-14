@@ -1,5 +1,16 @@
-
-  <mat-toolbar >
-    <p> footer works!</p>
-  </mat-toolbar>
-
+<mat-toolbar fxFill>
+  <div fxFill class="flex-container-nowrap"  [fxLayout] = "isSmallScreen() ? 'column': 'row'" >
+        <div class="flex-item-inherit icon-text"  style=" padding-right: 2em; font-size:14px">
+          <mat-icon aria-hidden="false" aria-label="Example heart icon">phone</mat-icon>
+          <span>(530) 801-1378 </span>
+        </div>
+        <div class="flex-item-inherit icon-text"   style="font-size:14px">
+          <mat-icon aria-hidden="false" aria-label="Example delete icon">email</mat-icon>
+          <span>vpalomar00@gmail.com</span>
+        </div>
+        <div class="flex-item-auto icon-text-end "  style="font-size:14px">
+          <mat-icon aria-hidden="false" aria-label="Example delete icon">copyright</mat-icon>
+          <span>Copyright {{currentYear}}, Victor Palomar</span>
+        </div>
+  </div>
+</mat-toolbar>

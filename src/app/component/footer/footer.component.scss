@@ -1,3 +1,30 @@
-mat-toolbar {
-  background-color: rgba(255,255,255, 0.1) !important;
+@import "../../../themes.scss";
+
+*{
+  color: map-get($accent, 500) !important;
 }
+span{
+  justify-content: center;
+  align-content: center;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.icon-text-end {
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 600px) {
+    justify-content: flex-start;
+  }
+
+  @media not screen and (max-width: 600px) {
+    justify-content: flex-end;
+  }
+
+}
+
