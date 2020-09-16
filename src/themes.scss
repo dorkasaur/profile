@@ -137,34 +137,22 @@ $light-grey: (
 );
 
 
-
 // Define your application's custom theme.
 
 $primary: mat-palette($dark-grey);
-$accent: mat-palette($light-grey);
-$active: mat-palette($mat-cyan);
+//$accent: mat-palette($light-grey);
+$accent: mat-palette($mat-cyan);
 
 
 $theme: mat-dark-theme((
   color: (
     primary: $primary,
-    accent: $accent,
+    accent: $accent
   )
 ));
 
 
 @include angular-material-theme($theme);
 
-@mixin themed-stylesheets($mat-theme) {
 
-  $primary: map-get($mat-theme, primary);
-  $accent: map-get($mat-theme, accent);
-  $primary-color: mat-color($primary);
-  $accent-color: mat-color($accent);
-
-  .themed-element {
-    background: $primary-color;
-    color: $accent-color;
-  }
-}
 

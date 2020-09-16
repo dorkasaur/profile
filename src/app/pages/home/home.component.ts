@@ -1,26 +1,23 @@
 import {Component, NgZone, OnInit} from '@angular/core';
-import {SMALL_WIDTH_BREAKPOINT} from '../../app.module';
+import {Globals} from '../../globals';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
+
 export class HomeComponent implements OnInit {
+  globals: Globals;
+  private mediaMatcher: MediaQueryList;
 
-  private mediaMatcher: MediaQueryList = window.matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
-  constructor(zone: NgZone) {
-    this.mediaMatcher.addEventListener('change', () => {
-      this.isSmallScreen();
-    });
+  constructor(zone: NgZone, globals: Globals) {
+    this.globals = globals;
+
+
   }
+
   ngOnInit(): void {
-  }
-
-
-
-  isSmallScreen(): boolean {
-    return this.mediaMatcher.matches;
   }
 
 

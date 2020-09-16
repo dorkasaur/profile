@@ -1,61 +1,53 @@
-  <mat-toolbar>
-    <div class="flex-container-row-nowrap" fxLayoutAlign="start center"  fxFill >
-      <div class="flex-item-inherit" fxHide.gt-xs>
-        <a>
-        <button mat-button (click)="onToggleSidenav()">
-          <mat-icon> menu </mat-icon>
-        </button>
-        </a>
-      </div>
-      <div class="flex-item-auto">
-        <a> <span class="logoDark">V</span></a>
-        <a> <span class="logoDark">P</span></a>
-      </div>
-      <div class="flex-item-auto"  fxHide.xs >
-        <mat-nav-list class="list-horizontal">
-          <div class="flex-container-row-nowrap" fxFill fxLayout="row" fxLayoutAlign="end center"
-               style="justify-content: flex-end;">
-            <div class="flex-item-inherit">
-              <a mat-list-item routerLink="/home" routerLinkActive="active-list-item" style="padding: 0; margin:0;">
-                <mat-icon>home</mat-icon>
-                <span>Home</span>
-              </a>
-            </div>
-            <div class="flex-item-inherit ">
-              <a mat-list-item routerLink="/about" routerLinkActive="active-list-item">
-                <mat-icon>person</mat-icon>
-                <span>About</span>
-              </a>
-            </div>
-            <div class="flex-item-inherit ">
-              <a mat-list-item routerLink="/portfolio" routerLinkActive="active-list-item">
-                <mat-icon>code</mat-icon>
-                <span>Portfolio</span>
-              </a>
-            </div>
-            <div class="flex-item-inherit ">
-              <a #t="matMenuTrigger" [matMenuTriggerFor]="menu" mat-list-item>
-                <!--<mat-icon>keyboard_arrow_down</mat-icon>-->
-                <mat-animated-icon [animate]="t.menuOpen" class="icon" end="close"
-                                   start="keyboard_arrow_down" style="height: 24px; width: 24px;"></mat-animated-icon>
-                <span> Social Media</span>
-              </a>
-              <mat-menu #menu="matMenu">
-                <a href="https://www.linkedin.com/in/victor-palomar-26ab467/" mat-menu-item>
-                  <i class="fab fa-linkedin"></i>
-                  LinkedIn
-                </a>
-                <a href="https://github.com/dorkasaur/" mat-menu-item>
-                  <i class="fab fa-github"></i>
-                  GitHub
-                </a>
-              </mat-menu>
-            </div>
-          </div>
-        </mat-nav-list>
-      </div>
-    </div>
-  </mat-toolbar>
+<mat-toolbar fxFill fxLayout="row" fxLayoutAlign="start center">
 
+  <div class="flex-item-inherit" fxHide.gt-xs>
+    <a>
+      <button (click)="onToggleSidenav()" mat-button>
+        <mat-icon> menu</mat-icon>
+      </button>
+    </a>
+  </div>
+  <div class="flex-item-auto">
+    <span class="logo"> Victor Palomar</span>
+  </div>
+  <div class="flex-item-auto" fxHide.xs>
+    <mat-nav-list class="list-horizontal">
+      <nav class="flex-container-row-nowrap" fxFill fxLayout="row" fxLayoutAlign="end center"
+           style="justify-content: flex-end;">
+        <div class="flex-item-inherit">
+          <a mat-list-item routerLink="/home" routerLinkActive="active-list-item" style="padding: 0; margin:0;">
+            <mat-icon> home</mat-icon>
+            Home
+          </a>
+        </div>
+        <div class="flex-item-inherit ">
+          <a mat-list-item routerLink="/about" routerLinkActive="active-list-item">
+            <mat-icon>person</mat-icon>
+            About
+          </a>
+        </div>
+
+        <div class="flex-item-inherit ">
+          <a #t="matMenuTrigger" [matMenuTriggerFor]="menu" mat-list-item>
+            <mat-animated-icon [animate]="t.menuOpen" class="icon" end="close"
+                               start="keyboard_arrow_down" style="height: 24px; width: 24px;"></mat-animated-icon>
+            Social Media
+          </a>
+          <mat-menu #menu="matMenu">
+            <a href="https://www.linkedin.com/in/victor-palomar-26ab467/" mat-menu-item>
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+            <a href="https://github.com/dorkasaur/" mat-menu-item>
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+          </mat-menu>
+        </div>
+      </nav>
+    </mat-nav-list>
+  </div>
+
+</mat-toolbar>
 
 

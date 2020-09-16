@@ -1,9 +1,7 @@
 @import "../../../themes.scss";
 
-*{
-  color: map-get($accent, 500) !important;
-}
-span{
+
+span {
   justify-content: center;
   align-content: center;
 }

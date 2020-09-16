@@ -1,4 +1,4 @@
-import { Directive, Input } from '@angular/core';
+import {Directive, Input} from '@angular/core';
 
 @Directive({
   // tslint:disable-next-line:directive-selector
@@ -9,6 +9,7 @@ export class VarDirective {
 
   @Input() var: any;
 
-  constructor() { }
+  constructor() {
+  }
 
 }

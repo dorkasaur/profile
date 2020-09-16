@@ -1,56 +1,28 @@
 @import "../../../themes.scss";
 
-*{
-  color: map-get($accent, 500) !important;
-}
-
-.example-card {
-  max-width: 400px;
-}
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+* {
+  color: map-get($primary, 200) !important;
 }
 
 
 .row {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  flex-direction: row;
-
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  align-items: center;
-  flex: 0.8 ;
-
+  flex: 0.50;
 }
 
-.cell {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  text-align: center;
-}
 
 img {
-height:auto;
-  max-width:100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 100%;
   display: block;
+  width: 100%;
 }
 
+mat-grid-tile {
+  background-color: white;
+}
 
+mat-grid-tile a img {
+  width: auto;
+  max-height: 70px
+}

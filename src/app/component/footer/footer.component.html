@@ -1,16 +1,19 @@
 <mat-toolbar fxFill>
-  <div fxFill class="flex-container-nowrap"  [fxLayout] = "isSmallScreen() ? 'column': 'row'" >
-        <div class="flex-item-inherit icon-text"  style=" padding-right: 2em; font-size:14px">
-          <mat-icon aria-hidden="false" aria-label="Example heart icon">phone</mat-icon>
-          <span>(530) 801-1378 </span>
-        </div>
-        <div class="flex-item-inherit icon-text"   style="font-size:14px">
-          <mat-icon aria-hidden="false" aria-label="Example delete icon">email</mat-icon>
-          <span>vpalomar00@gmail.com</span>
-        </div>
-        <div class="flex-item-auto icon-text-end "  style="font-size:14px">
-          <mat-icon aria-hidden="false" aria-label="Example delete icon">copyright</mat-icon>
-          <span>Copyright {{currentYear}}, Victor Palomar</span>
-        </div>
+  <div [fxLayout]="globals.isSmallScreen() ? 'column': 'row'" class="flex-container-nowrap" fxFill>
+    <div class="flex-item-inherit  icon-text" style=" padding-right: 2em; font-size:14px">
+      <p class="icon-text">
+        <mat-icon aria-hidden="false" aria-label="Example heart icon">phone</mat-icon>
+        (530) 801-1378
+      </p>
+    </div>
+    <div class="flex-item-inherit icon-text" style="font-size:14px">
+      <p class="icon-text">
+        <mat-icon aria-hidden="false" aria-label="Example delete icon">email</mat-icon>
+        vpalomar00@gmail.com
+      </p>
+    </div>
+    <div class="flex-item-auto icon-text-end " style="font-size:14px">
+      <p class="icon-text"> &copy; {{currentYear}} Victor Palomar</p>
+    </div>
   </div>
 </mat-toolbar>

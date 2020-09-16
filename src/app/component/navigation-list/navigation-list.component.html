@@ -1,35 +1,29 @@
-<mat-nav-list >
-
-      <a mat-list-item routerLink="/home" routerLinkActive="active-list-item" style="padding: 0; margin:0;" (click)="onSidenavClose()">
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
+<mat-nav-list>
+  <nav>
+    <a (click)="onSidenavClose()" mat-list-item routerLink="/home" routerLinkActive="active-list-item"
+       style="padding: 0; margin:0;">
+      <mat-icon>home</mat-icon>
+      Home
+    </a>
+    <a (click)="onSidenavClose()" mat-list-item routerLink="/about" routerLinkActive="active-list-item">
+      <mat-icon>person</mat-icon>
+      About
+    </a>
+    <a #t="matMenuTrigger" [matMenuTriggerFor]="menu" mat-list-item>
+      <!--<mat-icon>keyboard_arrow_down</mat-icon>-->
+      <mat-animated-icon [animate]="t.menuOpen" class="icon" end="close"
+                         start="keyboard_arrow_down" style="height: 24px; width: 24px;"></mat-animated-icon>
+      Social Media
+    </a>
+    <mat-menu #menu="matMenu">
+      <a href="https://www.linkedin.com/in/victor-palomar-26ab467/" mat-menu-item>
+        <i class="fab fa-linkedin"></i>
+        LinkedIn
       </a>
-
-      <a mat-list-item routerLink="/about" routerLinkActive="active-list-item" (click)="onSidenavClose()">
-        <mat-icon>person</mat-icon>
-        <span>About</span>
+      <a href="https://github.com/dorkasaur/" mat-menu-item>
+        <i class="fab fa-github"></i>
+        GitHub
       </a>
-
-      <a mat-list-item routerLink="/portfolio" routerLinkActive="active-list-item" (click)="onSidenavClose()">
-        <mat-icon>code</mat-icon>
-        <span>Portfolio</span>
-      </a>
-
-      <a #t="matMenuTrigger" [matMenuTriggerFor]="menu" mat-list-item>
-        <!--<mat-icon>keyboard_arrow_down</mat-icon>-->
-        <mat-animated-icon [animate]="t.menuOpen" class="icon" end="close"
-                           start="keyboard_arrow_down" style="height: 24px; width: 24px;"></mat-animated-icon>
-        <span> Social Media</span>
-      </a>
-      <mat-menu #menu="matMenu">
-        <a href="https://www.linkedin.com/in/victor-palomar-26ab467/" mat-menu-item>
-          <i class="fab fa-linkedin"></i>
-          LinkedIn
-        </a>
-        <a href="https://github.com/dorkasaur/" mat-menu-item>
-          <i class="fab fa-github"></i>
-          GitHub
-        </a>
-      </mat-menu>
-
+    </mat-menu>
+  </nav>
 </mat-nav-list>

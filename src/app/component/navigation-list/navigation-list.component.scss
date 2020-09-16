@@ -2,39 +2,22 @@
 @import "../../../styles.scss";
 
 
-
 .list-horizontal {
   padding: 0;
   margin: 0;
+
   .mat-list-item {
     display: flex;
   }
 }
 
 
-a, :host a  {
-  color:  map-get($accent, 500) !important;
-}
-
-a:hover, :host a:hover {
-  color: map-get($accent, 200) !important;
-}
-
-
-
-span.logoDark{
+span.logoDark {
   //color:#101010;
-  color: map-get($accent, 500) !important;
-  font-size: 16px;
+  color: map-get($primary, 300) !important;
+  // font-size: 16px;
 }
 
-.active-list-item, :host .active-list-item , a:active{
-  color: map-get($active, 500) !important;
-}
 
-.active-list-item:hover, :host .active-list-item:hover {
-  color: map-get($active, 200) !important;
-
-}
 
 

@@ -1,24 +1,39 @@
-<div class="flex-container-nowrap"   [fxLayout] = "isSmallScreen() ? 'column ': 'row'" >
-
-  <div class="flex-item-auto" fxLayout="column"    fxHide.xs fxFlex="0.001%"  fxLayoutAlign="center center"></div>
-  <div class="flex-item-auto" fxLayout="column"   fxFlexAlign="center center"    fxLayoutAlign="center center">
-
-    <div class="flex-item-inherit">
-      <h1 style="color:white">Victor Palomar</h1>
-
-    </div>
-    <div class="flex-item-inherit">
-      <p> Software Developer</p>
-    </div>
-
-
+<div [fxLayout]="this.globals.isSmallScreen() ? 'column ': 'row'">
+  <div fxFill fxFlex fxFlexAlign="center" fxLayout="column nowrap" fxLayoutAlign="center">
+    <section class="hero-image">
+      <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 2156 990" xmlns="http://www.w3.org/2000/svg">
+        <image height="990" href="assets/img/1.png" width="2156" x="0" y="0"/>
+      </svg>
+    </section>
+    <section>
+      <h1>Trusted By </h1>
+      <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile>
+          <a href="https://www.broadcom.com/">
+            <img alt="broadcom" src="assets/img/Broadcom.jpg"/>
+          </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <a href="https://www.build.com/">
+            <img alt="build.com" src="assets/img/build.png"/>
+          </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <a href="https://www.linkedin.com/company/xbridge-systems/">
+            <img alt="xbridge" src="assets/img/xbridge.jpg"/>
+          </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <a href="https://www.shastaqa.com/">
+            <img alt="build" src="../../../assets/img/shastaqa.png"/>
+          </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <a href="https://www.necam.com/">
+            <img alt="NEC" src="assets/img/nec.png"/>
+          </a></mat-grid-tile>
+      </mat-grid-list>
+    </section>
   </div>
-
-  <div class="row" >
-    <div class="cell" >
-      <img src= "assets/img/6.png" alt="me" class="img-responsive"/>
-    </div>
-  </div>
-
-  <div class="flex-item-auto" fxLayout="column" fxHide.xs  fxFlex="0.001%" fxLayoutAlign="center center"></div>
 </div>
+

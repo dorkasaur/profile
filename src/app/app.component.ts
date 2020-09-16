@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, NgZone} from '@angular/core';
+import {Globals} from './globals';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'profile';
+
+  private globals: Globals;
+
+  constructor(zone: NgZone, globals: Globals) {
+    this.globals = globals;
+  }
 }
